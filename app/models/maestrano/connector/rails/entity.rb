@@ -32,7 +32,6 @@ class Maestrano::Connector::Rails::Entity
   end
 
   def self.last_update_date_from_external_entity_hash(entity)
-    entity['updated_at'].to_time
+    entity['updated_at'] ? entity['updated_at'].to_time : nil
   end
-
 end
